@@ -1,13 +1,13 @@
 Members: Christopher Brousseau, Janay Murphy, Maxwell Tekimang, Nina Perone, Sharon Dong, Iman Ahmed
-##System Overview
-#Project Abstract
+# System Overview
+## Project Abstract
 This document proposes a video game to add to the “Exer-games” genre by implementing a game that is
 controlled fully by dumbbells. Using Dumbbells the player will be able to fight monsters and beat levels
 all while the scores are kept and can be compared on a live leaderboard. Each level will be unique in the
 way that the exercises, reps, and sets will be different leading to the overall development of the player's
 muscles. To play, the player would place the attachment to the dumbbell, the sensor on the attachment
 records every rep the player performs, and each rep would trigger an attack.
-#Conceptual Design
+## Conceptual Design
 The video game itself will be coded using Unity and C# and there should not be any other languages
 needed on the coding end, since there are built in databases to store the users local data. Hardware side we
 will use an Arduino with the needed DoF sensors in order to get the movements of the player.
