@@ -1,0 +1,52 @@
+LTQ-82 Level-Selection-UI
+
+Created, reformatted level selection UI. Missing tests and level buttons lead to testing instead of actual levels
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Thu Apr 3 12:22:30 2025 -0400
+#
+# On branch LTQ-82-Level-Selection-UI
+# Your branch and 'origin/LTQ-82-Level-Selection-UI' have diverged,
+# and have 10 and 3 different commits each, respectively.
+#
+# Changes to be committed:
+#	new file:   LiftQuest/Assets/Scenes/LevelSelection.unity
+#	new file:   LiftQuest/Assets/Scenes/LevelSelection.unity.meta
+#	modified:   LiftQuest/Assets/Scenes/MainMenu.unity
+#	new file:   LiftQuest/Assets/Scenes/SampleLevel1.unity
+#	new file:   LiftQuest/Assets/Scenes/SampleLevel1.unity.meta
+#	new file:   LiftQuest/Assets/Scenes/SampleLevel2.unity
+#	new file:   LiftQuest/Assets/Scenes/SampleLevel2.unity.meta
+#	new file:   LiftQuest/Assets/Scripts/LevelButton.cs
+#	new file:   LiftQuest/Assets/Scripts/LevelButton.cs.meta
+#	new file:   LiftQuest/Assets/Scripts/LevelSelectionMenu.cs
+#	new file:   LiftQuest/Assets/Scripts/LevelSelectionMenu.cs.meta
+#	modified:   LiftQuest/Assets/Scripts/MainMenu.cs
+#	new file:   LiftQuest/Assets/Scripts/MoveToNextLevel.cs
+#	new file:   LiftQuest/Assets/Scripts/MoveToNextLevel.cs.meta
+#	new file:   LiftQuest/Assets/Scripts/Parallax.cs
+#	new file:   LiftQuest/Assets/Scripts/Parallax.cs.meta
+#	modified:   LiftQuest/Assets/Settings/PC_RPAsset.asset
+#	modified:   LiftQuest/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset
+#	new file:   LiftQuest/Assets/Textures/Level Select.meta
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelSelectBackground.png
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelSelectBackground.png.meta
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelSelectMenu.png
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelSelectMenu.png.meta
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelState1.png
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelState1.png.meta
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelState2.png
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelState2.png.meta
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelState3.png
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelState3.png.meta
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelState4.png
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelState4.png.meta
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelState5.png
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelState5.png.meta
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelStateButtons.png
+#	new file:   LiftQuest/Assets/Textures/Level Select/LevelStateButtons.png.meta
+#	modified:   LiftQuest/ProjectSettings/EditorBuildSettings.asset
+#	modified:   LiftQuest/ProjectSettings/GraphicsSettings.asset
+#
