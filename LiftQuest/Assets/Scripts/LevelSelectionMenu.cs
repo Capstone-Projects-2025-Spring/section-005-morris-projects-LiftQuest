@@ -13,6 +13,11 @@ public class LevelSelectionMenu : MonoBehaviour
 
     public Sprite[] levelImages;
 
+    public void OnClick()
+    {
+        Debug.Log(gameObject.name + " Button Clicked.");
+    }
+
     private void Awake()
     {
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
@@ -39,5 +44,7 @@ public class LevelSelectionMenu : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+
+
 
 }

@@ -39,6 +39,7 @@ public class LevelButton : MonoBehaviour
     
     public void OnClick()
     {
+        Debug.Log(button.name + "Button Clicked.");
 
     }
 }
