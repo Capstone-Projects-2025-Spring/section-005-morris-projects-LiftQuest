@@ -5,7 +5,10 @@ public class MainMenu : MonoBehaviour
 {
     public void Play()
     {
-        //there is no game
+        //temporary Play to get to Level Selection menu
+        //To be removed later
+        SceneManager.LoadSceneAsync(1);
+
 
     }
     public void QuitGame()
