@@ -148,9 +148,9 @@ public class DatabaseManager: MonoBehaviour
         foreach (var user in snapshot.Children)
         {
             string dbUsername = user.Child("username").Value?.ToString();
-            Debug.Log("Username: " + dbUsername);
+            //Debug.Log("Username: " + dbUsername);
             string dbPassword = user.Child("password").Value?.ToString();
-            Debug.Log("Password: " + dbPassword);
+            //Debug.Log("Password: " + dbPassword);
 
             if (dbUsername == login_username.text && dbPassword == login_password.text)
             {
