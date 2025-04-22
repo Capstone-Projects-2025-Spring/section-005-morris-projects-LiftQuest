@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using UnityEngine;
 
 public class ProfileData
 {
@@ -116,6 +117,22 @@ public class DatabaseManagerEditModeTests
 
         string error = ProfileValidator.Validate(data);
         Assert.AreEqual("Password cannot be empty.", error);
+    }
+
+    [Test]
+    public void Logout_Clears_PlayerPrefs()
+    {
+        PlayerPrefs.SetString("ProfileID", "TestProfile123");
+        PlayerPrefs.Save();
+
+        var gameObject = new GameObject();
+        var dbManager = gameObject.AddComponent<DatabaseManager>();
+
+        dbManager.Logout();
+
+        Assert.IsFalse(PlayerPrefs.HasKey("ProfileID"), "Logout should delete the ProfileID from PlayerPrefs.");
+
+        Object.DestroyImmediate(gameObject);
     }
 
 
