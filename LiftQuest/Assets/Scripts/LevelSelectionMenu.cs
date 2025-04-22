@@ -40,9 +40,9 @@ public class LevelSelectionMenu : MonoBehaviour
         SceneManager.LoadSceneAsync(0);
     }
 
-    public void loadLevel()
+    public void loadLevel(GameObject buttonObject)
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(buttonObject.name);
     }
 
 

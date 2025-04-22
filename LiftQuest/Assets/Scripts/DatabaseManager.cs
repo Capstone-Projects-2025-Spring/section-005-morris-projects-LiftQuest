@@ -7,6 +7,7 @@ using System.Xml.Serialization;
 using Firebase;
 using Firebase.Extensions;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 
 
@@ -172,6 +173,8 @@ public class DatabaseManager: MonoBehaviour
         {
             Debug.LogWarning("Login failed: Invalid credentials.");
         }
+
+        SceneManager.LoadScene("LevelSelection");
 
     }
 
