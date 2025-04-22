@@ -1,15 +1,17 @@
 using UnityEngine;
-using System.Collections;
-
 public class Monster : MonoBehaviour
 {
-    [Header("Monster Settings")]
+    [Header("Monster Stats")]
     public int maxHealth = 7;
     private int currentHealth;
 
-    [Header("Movement")]
-    public float moveSpeed = 2f;
-    public float attackRange = 2f;
+    [Header("Boss Settings")]
+    public bool isBoss = false;
+
+    [Header("Growth")]
+    public float maxScale = 1.5f;
+    public float scaleSpeed = 0.3f;
+    public float attackThreshold = 1.2f;
 
     [Header("Attack")]
     public int damage = 1;
@@ -34,28 +36,33 @@ public class Monster : MonoBehaviour
         if (player == null || player.isGameOver) return;
 
         attackTimer -= Time.deltaTime;
+        GrowTowardPlayer();
 
-        float distance = Vector3.Distance(transform.position, player.transform.position);
-        if (distance > attackRange)
-        {
-            MoveTowardsPlayer();
-        }
-        else if (attackTimer <= 0)
+        if (transform.position.y <= attackThreshold && attackTimer <= 0)
         {
             AttackPlayer();
         }
     }
 
-    void MoveTowardsPlayer()
+    void GrowTowardPlayer()
     {
-        Vector3 direction = (player.transform.position - transform.position).normalized;
-        transform.position += direction * moveSpeed * Time.deltaTime;
-        transform.LookAt(player.transform);
+        float scaleStep = scaleSpeed * Time.deltaTime;
+        transform.position += Vector3.down * (scaleStep * 0.3f);
     }
 
     void AttackPlayer()
     {
-        player.TakeDamage(damage);
+        if (isBoss)
+        {
+            // Boss ends the game on attack
+            Debug.Log("Boss attacked! Game over.");
+            spawner.Win(); // Ensure death
+        }
+        else
+        {
+            player.TakeDamage(damage);
+        }
+
         ResetAttackTimer();
     }
 
@@ -66,6 +73,15 @@ public class Monster : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
+        if (isBoss)
+        {
+            // Boss cannot be killed, just reward points
+            spawner.score++;
+            spawner.UpdateScoreUI();
+            Debug.Log("Boss hit! Score: " + spawner.score);
+            return;
+        }
+
         currentHealth -= damageAmount;
         Debug.Log("Monster hit! Health: " + currentHealth);
 
@@ -79,7 +95,9 @@ public class Monster : MonoBehaviour
     {
         if (spawner != null)
         {
-            spawner.update();
+            spawner.score++;
+            spawner.UpdateScoreUI();
+            spawner.OnMonsterDefeated();
         }
         Destroy(gameObject);
     }

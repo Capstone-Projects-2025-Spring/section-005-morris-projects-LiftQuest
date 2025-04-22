@@ -6,23 +6,23 @@ public class Player : MonoBehaviour
     public int maxHearts = 3;
     private int currentHearts;
 
-    [Header("Combat Settings")]
-    public float attackRange = 3f;
-    public LayerMask monsterLayer;
+    [Header("Combat")]
     public float clickCooldown = 0.5f;
+    public float attackRadius = 1.5f; // Based on monster scale
+    public LayerMask monsterLayer;
     private bool canAttack = true;
-    
+
     [Header("Game State")]
     public bool isGameOver = false;
 
-    private Collider[] hitColliders = new Collider[5];
+    private Collider2D[] hitColliders = new Collider2D[5];
+
+    [SerializeField] private GameManager _gm;
 
     void Start()
     {
         currentHearts = maxHearts;
         UpdateHealthDisplay();
-        Cursor.lockState = CursorLockMode.Locked;
-
     }
 
     void Update()
@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
-            Debug.Log("button clicked");
             Attack();
         }
     }
@@ -39,36 +38,25 @@ public class Player : MonoBehaviour
     void Attack()
     {
         canAttack = false;
-        
-        int numColliders = Physics.OverlapSphereNonAlloc(
-            transform.position, 
-            attackRange, 
-            hitColliders, 
-            monsterLayer
-        );
 
-        bool hitMonster = false;
-        
-        for (int i = 0; i < numColliders; i++)
+        int numHits = Physics2D.OverlapCircleNonAlloc(transform.position, attackRadius, hitColliders, monsterLayer);
+        bool hitSomething = false;
+
+        for (int i = 0; i < numHits; i++)
         {
-            Monster monster = hitColliders[i].GetComponent<Monster>();
-            if (monster != null)
+            Monster m = hitColliders[i].GetComponent<Monster>();
+            if (m != null)
             {
-                monster.TakeDamage(1);
-                monster.ResetAttackTimer();
-                hitMonster = true;
+                m.TakeDamage(1);
+                m.ResetAttackTimer();
+                hitSomething = true;
             }
-
         }
 
-        if (hitMonster)
-        {
+        if (hitSomething)
             Debug.Log("Hit a monster!");
-        }
         else
-        {
             Debug.Log("No monsters in range");
-        }
 
         Invoke(nameof(ResetAttack), clickCooldown);
     }
@@ -76,12 +64,6 @@ public class Player : MonoBehaviour
     void ResetAttack()
     {
         canAttack = true;
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
     public void TakeDamage(int damage)
@@ -103,8 +85,7 @@ public class Player : MonoBehaviour
     void GameOver()
     {
         isGameOver = true;
-        Time.timeScale = 0;
-        Cursor.lockState = CursorLockMode.None;
+        _gm.Lose();
         Debug.Log("Game Over!");
     }
 }
