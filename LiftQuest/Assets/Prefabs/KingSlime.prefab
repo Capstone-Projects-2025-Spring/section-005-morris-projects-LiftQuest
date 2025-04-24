@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2361052113947919445}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0.03, y: 0.7, z: 0}
   m_LocalScale: {x: -5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -140,9 +140,9 @@ MonoBehaviour:
   maxHealth: 1
   isBoss: 1
   maxScale: 1.5
-  scaleSpeed: 0.4
-  attackThreshold: 1
+  scaleSpeed: 0
+  attackThreshold: 1.3
   damage: 1
-  attackCooldown: 5
+  attackCooldown: 20
   player: {fileID: 0}
   spawner: {fileID: 0}

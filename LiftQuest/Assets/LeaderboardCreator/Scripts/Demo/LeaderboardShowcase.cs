@@ -62,7 +62,7 @@ namespace Dan.Demo
             _pageInput.image.color = Color.white;
             _entriesToTakeInput.image.color = Color.white;
             
-            Leaderboards.LiftQuestLeaderboard.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
+            Leaderboards.DemoSceneLeaderboard.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
             ToggleLoadingPanel(true);
         }
 
@@ -154,12 +154,12 @@ namespace Dan.Demo
 
         public void Submit()
         {
-            Leaderboards.LiftQuestLeaderboard.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
+            Leaderboards.DemoSceneLeaderboard.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
         }
         
         public void DeleteEntry()
         {
-            Leaderboards.LiftQuestLeaderboard.DeleteEntry(Callback, ErrorCallback);
+            Leaderboards.DemoSceneLeaderboard.DeleteEntry(Callback, ErrorCallback);
         }
 
         public void ResetPlayer()
@@ -169,7 +169,7 @@ namespace Dan.Demo
 
         public void GetPersonalEntry()
         {
-            Leaderboards.LiftQuestLeaderboard.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
+            Leaderboards.DemoSceneLeaderboard.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
         }
 
         private void OnPersonalEntryLoaded(Entry entry)
