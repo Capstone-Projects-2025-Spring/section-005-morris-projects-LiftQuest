@@ -1,0 +1,29 @@
+////////////////////////////
+
+Music Needed for Scene || Name of Track || Composer(s)
+
+////////////////////////////
+
+- Main menu screen	|| Title Screen - Find Mii 	|| Kazumi Totaka
+- Stage selection screen	|| Venture Forth - Find Mii 	|| Kazumi Totaka
+
+- Stage 1 (Forest)	|| In the Fog 	|| Heitaro Ashibe
+	- Boss Battle (King Slime)	|| The Unbreakable Water Jug 	|| Aishuu
+
+- Stage 2 (Ruins)	|| Ancient Ruins 	|| Manila
+	- Boss Battle (Hobgoblin)	|| Hot Battle	 || Kaori
+ 
+- Stage 3 (Dungeon Graveyard)	|| Decaying Ruins 	|| shimtone
+	- Boss Battle (Grim Reaper)	|| Tales of Spiritual Disturbances in Ruins	 || shimtone
+
+- Stage 4 (Typical Dungeon Room)	|| Flood of Death	 || Heitaro Ashibe
+	- Boss Battle (Guardian Golem)	|| Golem Battle 		|| Manila
+
+- Stage 5 (Treasure Room)	|| Brave Fighters 	|| t.tam
+	- Boss Battle (Dragon)	|| Demons Ahead 		|| shimtone
+
+- Victory?	|| Victory Fanfare FFVII 	|| Nobue Uematsu
+
+- You Died	|| Lose Fanfare - Yu-Gi-Oh World Championship 2007	 || Maki Kirioka, Hiroshi Tanabe, Masanori Akita
+
+////////////////////////////
