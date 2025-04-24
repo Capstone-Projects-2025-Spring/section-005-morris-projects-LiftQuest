@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,18 +24,47 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Text scoret;
     public int score;
+    public bool levelStarted = false;
 
-
+    [SerializeField] private GameObject calibrationScreen;
+    [SerializeField] private GameObject pauseScreen;
     private void Start()
     {
+        
+    }
+
+    public void Pause(){
+        pauseScreen.SetActive(true);
+    }
+
+    public void PauseBack(){
+        pauseScreen.SetActive(false);
+    }
+
+    public void LogOut(){
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void MainMenu(){
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    private void Update()
+{
+    if (levelStarted && !roundInProgress)
+    {
+        calibrationScreen.SetActive(false);
+        levelStarted = false;
         StartCoroutine(StartNextRound());
     }
+}
+
 
     IEnumerator StartNextRound()
     {
         roundInProgress = true;
         Debug.Log($"Starting Round {currentRound + 1}");
-        string roundLabel = (currentRound == monsterRounds.Length - 1) ? "FINAL ROUND: BOSS" : $"Round {currentRound + 1}";
+        string roundLabel = (currentRound == monsterRounds.Length - 1) ? "BOSS" : $"Round {currentRound + 1}";
         yield return StartCoroutine(FadeRoundText(roundLabel));
 
         yield return new WaitForSeconds(spawnDelay);

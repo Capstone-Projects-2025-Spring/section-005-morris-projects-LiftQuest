@@ -19,6 +19,10 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameManager _gm;
 
+    [SerializeField] private Sprite[] heartSprites;
+    [SerializeField] private SpriteRenderer heartImage;
+    private int i = 0;
+
     void Start()
     {
         currentHearts = maxHearts;
@@ -35,7 +39,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Attack()
+    public void Attack()
     {
         canAttack = false;
 
@@ -68,6 +72,8 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        i++;
+        heartImage.sprite = heartSprites[i];
         currentHearts -= damage;
         UpdateHealthDisplay();
 
@@ -79,6 +85,7 @@ public class Player : MonoBehaviour
 
     void UpdateHealthDisplay()
     {
+
         Debug.Log($"Player Health: {currentHearts}/{maxHearts}");
     }
 
