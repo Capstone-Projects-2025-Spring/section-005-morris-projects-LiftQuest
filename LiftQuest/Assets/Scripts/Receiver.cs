@@ -43,6 +43,9 @@ public class Receiver : MonoBehaviour
 
     [SerializeField] private GameManager _gm;
 
+    [SerializeField] private Sprite[] workoutSprites;
+    [SerializeField] private SpriteRenderer workoutSR;
+
     void Start()
     {
         profileManager = FindObjectOfType<ProfileManager>();
@@ -286,15 +289,17 @@ public class Receiver : MonoBehaviour
         switch (calibrationState)
         {
             case CalibrationState.NotStarted:
-                return "Calibration not started.";
+                return "Calibration \n not started.";
             case CalibrationState.PrepareRest:
-                return $"Prepare for rest position... ({Mathf.Ceil(calibrationTimer)}s)";
+                return $"Prepare for \n rest position...";
             case CalibrationState.RestPosition:
-                return $"Hold the rest position... ({Mathf.Ceil(calibrationTimer)}s)";
+                return $"Hold the \n rest position...";
             case CalibrationState.PrepareCurl:
-                return $"Prepare for curl position... ({Mathf.Ceil(calibrationTimer)}s)";
+                workoutSR.sprite = workoutSprites[0];
+                return $"Prepare for \n curl position...";
             case CalibrationState.CurlPosition:
-                return $"Hold the curl position... ({Mathf.Ceil(calibrationTimer)}s)";
+                workoutSR.sprite = workoutSprites[1];
+                return $"Hold the \n curl position...";
             case CalibrationState.Complete:
                 if (_gm != null) _gm.levelStarted = true;
                 return "Calibration complete! Start exercising.";
