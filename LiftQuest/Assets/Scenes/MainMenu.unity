@@ -1303,10 +1303,10 @@ MonoBehaviour:
   mainMenuMusic: {fileID: 8300000, guid: 2d2a6d19f1ac7964a9417a3dc41b43f0, type: 3}
   levelSelectMusic: {fileID: 8300000, guid: 81138a6f43a5aeb4988c077fdffb322a, type: 3}
   level1Music: {fileID: 8300000, guid: 25be91ce1eaeee244a695b2a574ffb69, type: 3}
-  level2Music: {fileID: 0}
-  level3Music: {fileID: 0}
-  level4Music: {fileID: 0}
-  level5Music: {fileID: 0}
+  level2Music: {fileID: 8300000, guid: 10842ea8b1ebb6541b534cf64c8cddc7, type: 3}
+  level3Music: {fileID: 8300000, guid: 93faa46b88dcc7e4293b922472af02d3, type: 3}
+  level4Music: {fileID: 8300000, guid: db7a2daaabf62884b8f2ff89b132cc5f, type: 3}
+  level5Music: {fileID: 8300000, guid: c9d66aa63206ccc41b1615ab7fa319ec, type: 3}
   buttonClick: {fileID: 8300000, guid: 7212027ee27d0d1448f10cf338064b5c, type: 3}
 --- !u!4 &1480825449
 Transform:
