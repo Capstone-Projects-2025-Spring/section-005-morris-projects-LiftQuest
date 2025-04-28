@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 public class Monster : MonoBehaviour
 {
     [Header("Monster Stats")]
@@ -21,9 +23,16 @@ public class Monster : MonoBehaviour
     [Header("References")]
     public Player player;
     public GameManager spawner;
+    [SerializeField] private Animator _anim;
+    [SerializeField] private AudioSource audioSource;
+    public AudioClip attackSound;
+    public AudioClip damageSound;
+    public AudioClip deathSound;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        _anim = GetComponent<Animator>();
         if (player == null)
             player = FindObjectOfType<Player>();
 
@@ -50,46 +59,68 @@ public class Monster : MonoBehaviour
         transform.position += Vector3.down * (scaleStep * 0.3f);
     }
 
-    void AttackPlayer()
+   void AttackPlayer()
     {
         if (isBoss)
         {
-            // Boss ends the game on attack
             Debug.Log("Boss attacked! Game over.");
-            spawner.Win(); // Ensure death
+            spawner.Win();
         }
         else
         {
-            player.TakeDamage(damage);
+            _anim.SetBool("isAttacking", true);
+            StartCoroutine(ResetAttackAnimation());
         }
 
         ResetAttackTimer();
     }
 
-    public void ResetAttackTimer()
+    IEnumerator ResetAttackAnimation()
     {
-        attackTimer = attackCooldown;
+        yield return new WaitForSeconds(1f); // Wait 0.5 seconds
+        audioSource.PlayOneShot(attackSound);
+        player.TakeDamage(damage);
+        _anim.SetBool("isAttacking", false);
     }
 
     public void TakeDamage(int damageAmount)
     {
         if (isBoss)
         {
-            // Boss cannot be killed, just reward points
+            _anim.SetBool("isDamaged", true);
+            StartCoroutine(ResetDamageAnimation());
             spawner.score++;
             spawner.UpdateScoreUI();
             Debug.Log("Boss hit! Score: " + spawner.score);
             return;
         }
 
+        _anim.SetBool("isDamaged", true);
+        StartCoroutine(ResetDamageAnimation());
+
         currentHealth -= damageAmount;
         Debug.Log("Monster hit! Health: " + currentHealth);
 
         if (currentHealth <= 0)
         {
+            audioSource.PlayOneShot(deathSound);
             Die();
         }
     }
+
+    IEnumerator ResetDamageAnimation()
+    {
+        audioSource.PlayOneShot(damageSound);
+        yield return new WaitForSeconds(0.5f); // Wait 0.5 seconds
+        _anim.SetBool("isDamaged", false);
+    }
+
+
+    public void ResetAttackTimer()
+    {
+        attackTimer = attackCooldown;
+    }
+
 
     void Die()
     {
@@ -101,4 +132,5 @@ public class Monster : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
 }
