@@ -248,7 +248,7 @@ MonoBehaviour:
   scaleSpeed: 0
   attackThreshold: 2
   damage: 1
-  attackCooldown: 7
+  attackCooldown: 11
   countdownText: {fileID: 5528640543334455868}
   countdownCanvas: {fileID: 1974201652322168523}
   player: {fileID: 0}
@@ -258,6 +258,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: f2dc0a9ca544d6745bb47ccf6cd31775, type: 3}
   damageSound: {fileID: 8300000, guid: dfa6f3fbea8060b42a8e3c522de02205, type: 3}
   deathSound: {fileID: 8300000, guid: 3571ed77f8f025e4aaa0e575632f73ce, type: 3}
+  enemyAnim: slimeAttacking
 --- !u!95 &-2183814798338575476
 Animator:
   serializedVersion: 7
