@@ -33,7 +33,8 @@ public class DatabaseManager: MonoBehaviour
     private string profileID;
     private DatabaseReference dbReference;
     private string databaseURL = "https://liftquestprofiles-default-rtdb.firebaseio.com/";
-    
+    public GameObject UsernameError;
+    public GameObject UsernameSuccess;
     
     // START, REGISTER, LOGIN / LOGOUT
     
@@ -44,36 +45,25 @@ public class DatabaseManager: MonoBehaviour
         profileID = PlayerPrefs.GetString("ProfileID", "");
 
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
-    {
-        if (task.Result == DependencyStatus.Available)
         {
-            FirebaseApp app = FirebaseApp.DefaultInstance;
-            FirebaseDatabase.GetInstance(app, databaseURL);
-            dbReference = FirebaseDatabase.DefaultInstance.RootReference;
-            Debug.Log("Firebase initialized successfully!");
-        }
-        else
-        {
-            Debug.LogError("Failed to initialize Firebase: " + task.Result);
-        }
-    });
+            if (task.Result == DependencyStatus.Available)
+            {
+                FirebaseApp app = FirebaseApp.DefaultInstance;
+                FirebaseDatabase.GetInstance(app, databaseURL);
+                dbReference = FirebaseDatabase.DefaultInstance.RootReference;
+                Debug.Log("Firebase initialized successfully!");
+            }
+            else
+            {
+                Debug.LogError("Failed to initialize Firebase: " + task.Result);
+            }
+        });
     }
 
     public void CreateProfile()
     {
+
         
-        /*if (!firebaseInitialized || dbReference == null)
-        {
-            Debug.LogError("Firebase is not initialized yet! Cannot create profile.");
-            return;
-        }
-        
-        Profile newProfile = new Profile(username.text, password.text, double.Parse(resting_measurement.text),
-            double.Parse(above_head_measurement.text), double.Parse(floor_measurement.text), 
-            int.Parse(stage_completed.text));
-        string json = JsonUtility.ToJson(newProfile);
-        dbReference.Child("profiles").Child(profileID).SetRawJsonValueAsync(json);*/
-    
         if (dbReference == null)
         {
             Debug.LogError("Database reference is null. Ensure Firebase is initialized.");
@@ -92,7 +82,7 @@ public class DatabaseManager: MonoBehaviour
             return;
         }
 
-        string profileKey = dbReference.Child("profiles").Push().Key;
+        /*string profileKey = dbReference.Child("profiles").Push().Key;
         profileID = profileKey;
         PlayerPrefs.SetString("ProfileID", profileID);
         PlayerPrefs.Save();
@@ -111,9 +101,54 @@ public class DatabaseManager: MonoBehaviour
                 {
                     Debug.Log("Profile created successfully!");
                 }
-            });
-    }
+            });*/
+        // Check if the username already exists
+        dbReference.Child("profiles")
+            .OrderByChild("username")
+            .EqualTo(username.text)
+            .GetValueAsync()
+            .ContinueWithOnMainThread(task =>
+            {
+                if (task.IsFaulted || task.IsCanceled)
+                {
+                    Debug.LogError("Error checking for existing username: " + task.Exception);
+                    return;
+                }
 
+                DataSnapshot snapshot = task.Result;
+                if (snapshot.Exists)
+                {
+                    Debug.LogError("Username already exists. Choose a different username.");
+                    UsernameError.SetActive(true);
+                    return;
+                }
+
+                // Username does not exist — proceed with profile creation
+                string profileKey = dbReference.Child("profiles").Push().Key;
+                profileID = profileKey;
+                PlayerPrefs.SetString("ProfileID", profileID);
+                PlayerPrefs.Save();
+
+                Profile newProfile = new Profile(username.text, password.text, 0, 0, 0, 0);
+                string json = JsonUtility.ToJson(newProfile);
+
+                dbReference.Child("profiles").Child(profileKey).SetRawJsonValueAsync(json)
+                    .ContinueWithOnMainThread(writeTask =>
+                    {
+                        if (writeTask.IsFaulted || writeTask.IsCanceled)
+                        {
+                            Debug.LogError("Failed to create profile: " + writeTask.Exception);
+                        }
+                        else
+                        {
+                            Debug.Log("Profile created successfully!");
+                            UsernameSuccess.SetActive(true);
+                        }
+                    });
+            });
+    
+    }
+    
     public void LoginUser()
     {
         StartCoroutine(LoginRoutine());
