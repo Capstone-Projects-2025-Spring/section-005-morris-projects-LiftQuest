@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Sprite[] upNextIcons;
     [SerializeField] private GameObject upNextPanel;
     private int i = 0;
+    public DatabaseManager dbManager;
     private void Start()
     {
         upNextIcon.GetComponent<SpriteRenderer>().sprite = upNextIcons[i];
@@ -47,6 +48,14 @@ public class GameManager : MonoBehaviour
     }
 
     public void LogOut(){
+        if (dbManager != null)
+        {
+            dbManager.Logout();
+        }
+        else
+        {
+            Debug.LogError("DatabaseManager reference is missing!");
+        }
         SceneManager.LoadScene("MainMenu");
     }
 

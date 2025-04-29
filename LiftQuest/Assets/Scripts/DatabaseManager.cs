@@ -34,14 +34,14 @@ public class DatabaseManager: MonoBehaviour
     private DatabaseReference dbReference;
     private string databaseURL = "https://liftquestprofiles-default-rtdb.firebaseio.com/";
     public GameObject UsernameError;
-    public GameObject UsernameSuccess;
+    public GameObject ProfileSuccess;
+    public GameObject InvalidCredentials;
     
     // START, REGISTER, LOGIN / LOGOUT
     
     void Start()
     {
         
-        //profileID = SystemInfo.deviceUniqueIdentifier;
         profileID = PlayerPrefs.GetString("ProfileID", "");
 
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
@@ -82,26 +82,6 @@ public class DatabaseManager: MonoBehaviour
             return;
         }
 
-        /*string profileKey = dbReference.Child("profiles").Push().Key;
-        profileID = profileKey;
-        PlayerPrefs.SetString("ProfileID", profileID);
-        PlayerPrefs.Save();
-
-        Profile newProfile = new Profile(username.text, password.text, 0, 0, 0, 0);
-        string json = JsonUtility.ToJson(newProfile);
-
-        dbReference.Child("profiles").Child(profileKey).SetRawJsonValueAsync(json)
-            .ContinueWithOnMainThread(task =>
-            {
-                if (task.IsFaulted || task.IsCanceled)
-                {
-                    Debug.LogError("Failed to create profile: " + task.Exception);
-                }
-                else
-                {
-                    Debug.Log("Profile created successfully!");
-                }
-            });*/
         // Check if the username already exists
         dbReference.Child("profiles")
             .OrderByChild("username")
@@ -142,7 +122,8 @@ public class DatabaseManager: MonoBehaviour
                         else
                         {
                             Debug.Log("Profile created successfully!");
-                            UsernameSuccess.SetActive(true);
+                            UsernameError.SetActive(false);
+                            ProfileSuccess.SetActive(true);
                         }
                     });
             });
@@ -203,13 +184,14 @@ public class DatabaseManager: MonoBehaviour
             PlayerPrefs.Save();
 
             Debug.Log("Login successful! Profile ID: " + profileID);
+            SceneManager.LoadScene("LevelSelection");
         }
         else
         {
             Debug.LogWarning("Login failed: Invalid credentials.");
+            InvalidCredentials.SetActive(true);
         }
 
-        SceneManager.LoadScene("LevelSelection");
 
     }
 
@@ -417,7 +399,7 @@ public class DatabaseManager: MonoBehaviour
 
         dbReference
             .Child("profiles")
-            .Child(profileID) // ✅ Make sure this is the actual profile ID from login
+            .Child(profileID)
             .UpdateChildrenAsync(passwordUpdate)
             .ContinueWithOnMainThread(task =>
             {
@@ -447,7 +429,7 @@ public class DatabaseManager: MonoBehaviour
 
         dbReference
             .Child("profiles")
-            .Child(profileID) // ✅ Make sure this is the actual profile ID from login
+            .Child(profileID)
             .UpdateChildrenAsync(restingUpdate)
             .ContinueWithOnMainThread(task =>
             {
@@ -477,7 +459,7 @@ public class DatabaseManager: MonoBehaviour
 
         dbReference
             .Child("profiles")
-            .Child(profileID) // ✅ Make sure this is the actual profile ID from login
+            .Child(profileID)
             .UpdateChildrenAsync(aboveHeadUpdate)
             .ContinueWithOnMainThread(task =>
             {
@@ -507,7 +489,7 @@ public class DatabaseManager: MonoBehaviour
 
         dbReference
             .Child("profiles")
-            .Child(profileID) // ✅ Make sure this is the actual profile ID from login
+            .Child(profileID)
             .UpdateChildrenAsync(floorUpdate)
             .ContinueWithOnMainThread(task =>
             {
@@ -537,7 +519,7 @@ public class DatabaseManager: MonoBehaviour
 
         dbReference
             .Child("profiles")
-            .Child(profileID) // ✅ Make sure this is the actual profile ID from login
+            .Child(profileID)
             .UpdateChildrenAsync(stageUpdate)
             .ContinueWithOnMainThread(task =>
             {
