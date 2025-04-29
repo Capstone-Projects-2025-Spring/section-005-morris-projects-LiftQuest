@@ -8,11 +8,8 @@ namespace Dan.Demo
 {
     public class LeaderboardShowcase : MonoBehaviour
     {
-        [Header("Gameplay:")]
-        [SerializeField] private TextMeshProUGUI _playerScoreText;
         
         [Header("Leaderboard Essentials:")]
-        [SerializeField] private TMP_InputField _playerUsernameInput;
         [SerializeField] private Transform _entryDisplayParent;
         [SerializeField] private EntryDisplay _entryDisplayPrefab;
         [SerializeField] private CanvasGroup _leaderboardLoadingPanel;
@@ -22,19 +19,9 @@ namespace Dan.Demo
         [SerializeField] private TMP_InputField _pageInput, _entriesToTakeInput;
         [SerializeField] private int _defaultPageNumber = 1, _defaultEntriesToTake = 100;
 
-        [Header("Personal Entry:")]
-        [SerializeField] private RectTransform _personalEntryPanel;
-        [SerializeField] private TextMeshProUGUI _personalEntryText;
-
         private int _playerScore;
         
         private Coroutine _personalEntryMoveCoroutine;
-
-        public void AddPlayerScore()
-        {
-            _playerScore++;
-            _playerScoreText.text = $"Your score: {_playerScore}";
-        }
         
         public void Load()
         {
@@ -62,7 +49,7 @@ namespace Dan.Demo
             _pageInput.image.color = Color.white;
             _entriesToTakeInput.image.color = Color.white;
             
-            Leaderboards.DemoSceneLeaderboard.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
+            Leaderboards.LiftQuestLeaderboard.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
             ToggleLoadingPanel(true);
         }
 
@@ -96,8 +83,6 @@ namespace Dan.Demo
         {
             if (_personalEntryMoveCoroutine != null) 
                 StopCoroutine(_personalEntryMoveCoroutine);
-            _personalEntryMoveCoroutine = StartCoroutine(MoveMenuCoroutine(_personalEntryPanel, 
-                new Vector2(xPos, _personalEntryPanel.anchoredPosition.y)));
         }
 
         private IEnumerator MoveMenuCoroutine(RectTransform rectTransform, Vector2 anchoredPosition)
@@ -154,12 +139,12 @@ namespace Dan.Demo
 
         public void Submit()
         {
-            Leaderboards.DemoSceneLeaderboard.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
+
         }
         
         public void DeleteEntry()
         {
-            Leaderboards.DemoSceneLeaderboard.DeleteEntry(Callback, ErrorCallback);
+            Leaderboards.LiftQuestLeaderboard.DeleteEntry(Callback, ErrorCallback);
         }
 
         public void ResetPlayer()
@@ -169,12 +154,11 @@ namespace Dan.Demo
 
         public void GetPersonalEntry()
         {
-            Leaderboards.DemoSceneLeaderboard.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
+            Leaderboards.LiftQuestLeaderboard.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
         }
 
         private void OnPersonalEntryLoaded(Entry entry)
         {
-            _personalEntryText.text = $"{entry.RankSuffix()}. {entry.Username} : {entry.Score}";
             MovePersonalEntryMenu(0f);
         }
         

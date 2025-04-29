@@ -59,7 +59,7 @@ public class UIManager : MonoBehaviour
         if (connectionStatusText != null && sensorReceiver != null)
         {
             connectionStatusText.text = sensorReceiver.IsConnected() ? 
-                "Connected to Sensor" : "Disconnected";
+                "Connected" : "Disconnected";
             
             connectionStatusText.color = sensorReceiver.IsConnected() ? 
                 Color.green : Color.red;

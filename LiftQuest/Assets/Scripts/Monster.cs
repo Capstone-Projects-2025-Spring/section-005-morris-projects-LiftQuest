@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 public class Monster : MonoBehaviour
 {
     [Header("Monster Stats")]
@@ -20,6 +21,8 @@ public class Monster : MonoBehaviour
     public int damage = 1;
     public float attackCooldown = 5f;
     private float attackTimer;
+    [SerializeField] private Text countdownText;
+    [SerializeField] private GameObject countdownCanvas;
 
     [Header("References")]
     public Player player;
@@ -46,7 +49,7 @@ public class Monster : MonoBehaviour
     void Update()
     {
         if (player == null || player.isGameOver) return;
-
+        countdownText.text = ((int)attackTimer).ToString();
         attackTimer -= Time.deltaTime;
         GrowTowardPlayer();
 
@@ -81,10 +84,12 @@ public class Monster : MonoBehaviour
 
     IEnumerator ResetAttackAnimation()
     {
+        countdownCanvas.SetActive(false);
         yield return new WaitForSeconds(1f); // Wait 0.5 seconds
         audioSource.PlayOneShot(attackSound);
         player.TakeDamage(damage);
         _anim.SetBool("isAttacking", false);
+        countdownCanvas.SetActive(true);
     }
 
     public void TakeDamage(int damageAmount)

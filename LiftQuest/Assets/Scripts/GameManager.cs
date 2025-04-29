@@ -28,9 +28,14 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject calibrationScreen;
     [SerializeField] private GameObject pauseScreen;
+
+    [SerializeField] private GameObject upNextIcon;
+    [SerializeField] private Sprite[] upNextIcons;
+    [SerializeField] private GameObject upNextPanel;
+    private int i = 0;
     private void Start()
     {
-        
+        upNextIcon.GetComponent<SpriteRenderer>().sprite = upNextIcons[i];
     }
 
     public void Pause(){
@@ -137,6 +142,14 @@ public class GameManager : MonoBehaviour
         currentRound++;
         if (currentRound < monsterRounds.Length)
         {
+            if(i == upNextIcons.Length-1){
+                upNextIcon.SetActive(false);
+                upNextPanel.SetActive(false);
+            }else{
+                i++;
+                upNextIcon.GetComponent<SpriteRenderer>().sprite = upNextIcons[i];
+            }
+            
             StartCoroutine(StartNextRound());
         }else{
             Win();
