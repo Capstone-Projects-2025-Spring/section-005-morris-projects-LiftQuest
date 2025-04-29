@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -28,6 +29,8 @@ public class Monster : MonoBehaviour
     public AudioClip attackSound;
     public AudioClip damageSound;
     public AudioClip deathSound;
+
+    public String enemyAnim;
 
     void Start()
     {
@@ -69,6 +72,7 @@ public class Monster : MonoBehaviour
         else
         {
             _anim.SetBool("isAttacking", true);
+            player.StartEnemyAnim(enemyAnim);
             StartCoroutine(ResetAttackAnimation());
         }
 
@@ -103,8 +107,8 @@ public class Monster : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            audioSource.PlayOneShot(deathSound);
-            Die();
+           audioSource.PlayOneShot(deathSound);
+           StartCoroutine(Die());
         }
     }
 
@@ -122,8 +126,9 @@ public class Monster : MonoBehaviour
     }
 
 
-    void Die()
+    IEnumerator Die()
     {
+        yield return new WaitForSeconds(0.5f);
         if (spawner != null)
         {
             spawner.score++;
@@ -132,5 +137,7 @@ public class Monster : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+    
 
 }

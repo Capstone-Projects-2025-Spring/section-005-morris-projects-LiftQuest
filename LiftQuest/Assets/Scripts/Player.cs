@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -23,8 +25,11 @@ public class Player : MonoBehaviour
     [SerializeField] private SpriteRenderer heartImage;
     private int i = 0;
 
+    private Animator anim;
+
     void Start()
     {
+        anim = GetComponent<Animator>();
         currentHearts = maxHearts;
         UpdateHealthDisplay();
     }
@@ -42,7 +47,7 @@ public class Player : MonoBehaviour
     public void Attack()
     {
         canAttack = false;
-
+        
         int numHits = Physics2D.OverlapCircleNonAlloc(transform.position, attackRadius, hitColliders, monsterLayer);
         bool hitSomething = false;
 
@@ -51,8 +56,9 @@ public class Player : MonoBehaviour
             Monster m = hitColliders[i].GetComponent<Monster>();
             if (m != null)
             {
+                anim.SetBool("playerAttacking", true);
+                StartCoroutine(AttackAnimation());
                 m.TakeDamage(1);
-                m.ResetAttackTimer();
                 hitSomething = true;
             }
         }
@@ -63,6 +69,11 @@ public class Player : MonoBehaviour
             Debug.Log("No monsters in range");
 
         Invoke(nameof(ResetAttack), clickCooldown);
+    }
+
+    IEnumerator AttackAnimation(){
+        yield return new WaitForSeconds(0.5f);
+        anim.SetBool("playerAttacking", false);
     }
 
     void ResetAttack()
@@ -94,5 +105,15 @@ public class Player : MonoBehaviour
         isGameOver = true;
         _gm.Lose();
         Debug.Log("Game Over!");
+    }
+
+    public void StartEnemyAnim(String animEnemy){
+        StartCoroutine(EnemyAnim(animEnemy));
+    }
+
+    IEnumerator EnemyAnim(String animEnemy){
+        anim.SetBool(animEnemy, true);
+        yield return new WaitForSeconds(0.5f);
+        anim.SetBool(animEnemy, false);
     }
 }

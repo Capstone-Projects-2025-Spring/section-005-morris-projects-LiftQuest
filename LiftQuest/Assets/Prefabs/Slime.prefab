@@ -79,7 +79,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< Updated upstream
   m_SortingOrder: 1
+=======
+  m_SortingOrder: 10
+>>>>>>> Stashed changes
   m_Sprite: {fileID: -1468217967, guid: 4c8d89ad675434a3795fbb65b6537500, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -145,7 +149,13 @@ MonoBehaviour:
   scaleSpeed: 0
   attackThreshold: 2
   damage: 1
+<<<<<<< Updated upstream
   attackCooldown: 7
+=======
+  attackCooldown: 6
+  countdownText: {fileID: 1242217277453972271}
+  countdownCanvas: {fileID: 6442462965401918134}
+>>>>>>> Stashed changes
   player: {fileID: 0}
   spawner: {fileID: 0}
   _anim: {fileID: 0}
@@ -153,6 +163,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: 9db94b2edefd7b2448b97e062849680a, type: 3}
   damageSound: {fileID: 8300000, guid: f1ecedf745de76a46bf3feba35cc0392, type: 3}
   deathSound: {fileID: 8300000, guid: ea92746c2b609de4db2e1bb8051fb21b, type: 3}
+  enemyAnim: slimeAttacking
 --- !u!95 &4647959108520914669
 Animator:
   serializedVersion: 7
