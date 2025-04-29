@@ -4131,7 +4131,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5422696122686548575, guid: b86e79c65ab79457aaf7ddd13fda58cb, type: 3}
     - {fileID: 7670505981878891710, guid: b86e79c65ab79457aaf7ddd13fda58cb, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6442462965401918134, guid: b86e79c65ab79457aaf7ddd13fda58cb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b86e79c65ab79457aaf7ddd13fda58cb, type: 3}
@@ -7981,7 +7982,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -57.3, y: -70.2}
+  m_AnchoredPosition: {x: -69.2, y: -70.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898402009
