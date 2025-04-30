@@ -3,6 +3,7 @@ using Dan.Main;
 using Dan.Models;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Dan.Demo
 {
@@ -133,13 +134,18 @@ namespace Dan.Demo
         
         private void Start()
         {
+            Submit();
             InitializeComponents();
-            Load();
+            
         }
 
         public void Submit()
         {
-
+            Leaderboards.LiftQuestLeaderboard.UploadNewEntry(PlayerPrefs.GetString("Username"), PlayerPrefs.GetInt("Score"), isSuccessful =>
+            {
+                if (isSuccessful)
+                    Load();
+            });
         }
         
         public void DeleteEntry()
@@ -171,6 +177,10 @@ namespace Dan.Demo
         private void ErrorCallback(string error)
         {
             Debug.LogError(error);
+        }
+
+        public void BackButton(){
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

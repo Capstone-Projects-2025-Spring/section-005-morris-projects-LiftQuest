@@ -200,6 +200,7 @@ public class DatabaseManager: MonoBehaviour
         {
             profileID = matchedProfileID;
             PlayerPrefs.SetString("ProfileID", profileID);
+            PlayerPrefs.SetString("Username", login_username.text);
             PlayerPrefs.Save();
 
             Debug.Log("Login successful! Profile ID: " + profileID);

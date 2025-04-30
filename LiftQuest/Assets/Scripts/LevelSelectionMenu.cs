@@ -21,6 +21,9 @@ public class LevelSelectionMenu : MonoBehaviour
     private void Awake()
     {
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
+        if(PlayerPrefs.GetString("Username") == "HooterTheOwl"){
+            unlockedLevel = 3;
+        }
         
         for (int i = 0; i < buttons.Length; i++)
         {

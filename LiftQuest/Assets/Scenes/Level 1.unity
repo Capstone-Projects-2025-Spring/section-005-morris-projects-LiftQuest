@@ -1760,7 +1760,7 @@ MonoBehaviour:
   fadeDuration: 0.5
   holdDuration: 1.5
   winScreen: {fileID: 931664941}
-  scoreText: {fileID: 1212130034}
+  scoreText: {fileID: 1637923781}
   loseScreen: {fileID: 1602481864}
   scoret: {fileID: 983103589}
   score: 0
