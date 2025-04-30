@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2025-04-30_16-24-21" tag="">
+  <assembly name="Assembly-CSharp">
+    <class name="ButtonHoverSwap" coveredlines="7" coverablelines="17" totallines="27" coveredbranches="0" totalbranches="0" />
+    <class name="CurlTracker" coveredlines="0" coverablelines="23" totallines="21" coveredbranches="0" totalbranches="0" />
+    <class name="SettingsMenu" coveredlines="18" coverablelines="45" totallines="59" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Assembly-CSharp-Editor">
+    <class name="ReadmeEditor" coveredlines="2" coverablelines="237" totallines="242" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Danqzq.LeaderboardCreator">
+    <class name="Dan.ConstantVariables" coveredlines="0" coverablelines="4" totallines="22" coveredbranches="0" totalbranches="0" />
+    <class name="Dan.Demo.EntryDisplay" coveredlines="0" coverablelines="17" totallines="25" coveredbranches="0" totalbranches="0" />
+    <class name="Dan.Demo.LeaderboardShowcase" coveredlines="0" coverablelines="213" totallines="186" coveredbranches="0" totalbranches="0" />
+    <class name="Dan.ExtensionMethods" coveredlines="0" coverablelines="2" totallines="10" coveredbranches="0" totalbranches="0" />
+    <class name="Dan.LeaderboardCreatorConfig" coveredlines="2" coverablelines="5" totallines="23" coveredbranches="0" totalbranches="0" />
+    <class name="Dan.Main.LeaderboardCreator" coveredlines="16" coverablelines="235" totallines="323" coveredbranches="0" totalbranches="0" />
+    <class name="Dan.Main.LeaderboardCreatorBehaviour" coveredlines="7" coverablelines="264" totallines="229" coveredbranches="0" totalbranches="0" />
+    <class name="Dan.Main.LeaderboardReference" coveredlines="0" coverablelines="24" totallines="41" coveredbranches="0" totalbranches="0" />
+    <class name="Dan.Main.Leaderboards" coveredlines="0" coverablelines="2" totallines="7" coveredbranches="0" totalbranches="0" />
+    <class name="Dan.Models.Entry" coveredlines="0" coverablelines="16" totallines="39" coveredbranches="0" totalbranches="0" />
+    <class name="Dan.Models.LeaderboardSearchQuery" coveredlines="0" coverablelines="30" totallines="52" coveredbranches="0" totalbranches="0" />
+    <class name="Dan.Requests" coveredlines="0" coverablelines="4" totallines="23" coveredbranches="0" totalbranches="0" />
+    <class name="LeaderboardCreatorDemo.LeaderboardManager" coveredlines="0" coverablelines="23" totallines="40" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="EditMode">
+    <class name="DatabaseManagerEditModeTests" coveredlines="35" coverablelines="75" totallines="141" coveredbranches="0" totalbranches="0" />
+    <class name="LevelSelectionEditModeTests" coveredlines="15" coverablelines="34" totallines="55" coveredbranches="0" totalbranches="0" />
+    <class name="ProfileValidator" coveredlines="7" coverablelines="16" totallines="141" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="LeaderboardCreatorEditor">
+    <class name="LeaderboardCreatorEditor.LeaderboardCreatorWindow" coveredlines="0" coverablelines="365" totallines="332" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="PlayMode">
+    <class name="DatabaseManagerPlayModeTests" coveredlines="0" coverablelines="79" totallines="95" coveredbranches="0" totalbranches="0" />
+    <class name="LevelSelectionPlayModeTests" coveredlines="0" coverablelines="56" totallines="60" coveredbranches="0" totalbranches="0" />
+    <class name="OptionsPlayModeTests" coveredlines="17" coverablelines="17" totallines="44" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Scripts">
+    <class name="AudioManager" coveredlines="39" coverablelines="99" totallines="121" coveredbranches="0" totalbranches="0" />
+    <class name="BicepCurlDetector" coveredlines="9" coverablelines="56" totallines="61" coveredbranches="0" totalbranches="0" />
+    <class name="ButtonPress" coveredlines="10" coverablelines="10" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="ButtonSound" coveredlines="0" coverablelines="6" totallines="16" coveredbranches="0" totalbranches="0" />
+    <class name="CalibrationData" coveredlines="5" coverablelines="11" totallines="103" coveredbranches="0" totalbranches="0" />
+    <class name="ChangeScene" coveredlines="0" coverablelines="15" totallines="24" coveredbranches="0" totalbranches="0" />
+    <class name="DatabaseManager" coveredlines="55" coverablelines="542" totallines="538" coveredbranches="0" totalbranches="0" />
+    <class name="ESPHomeAPI" coveredlines="0" coverablelines="84" totallines="85" coveredbranches="0" totalbranches="0" />
+    <class name="GameManager" coveredlines="58" coverablelines="230" totallines="185" coveredbranches="0" totalbranches="0" />
+    <class name="LevelButton" coveredlines="3" coverablelines="32" totallines="45" coveredbranches="0" totalbranches="0" />
+    <class name="LevelSelectionMenu" coveredlines="10" coverablelines="39" totallines="53" coveredbranches="0" totalbranches="0" />
+    <class name="MainMenu" coveredlines="0" coverablelines="12" totallines="19" coveredbranches="0" totalbranches="0" />
+    <class name="Monster" coveredlines="63" coverablelines="177" totallines="149" coveredbranches="0" totalbranches="0" />
+    <class name="MoveToNextLevel" coveredlines="0" coverablelines="12" totallines="23" coveredbranches="0" totalbranches="0" />
+    <class name="ParallaxBackground" coveredlines="2" coverablelines="5" totallines="15" coveredbranches="0" totalbranches="0" />
+    <class name="Player" coveredlines="36" coverablelines="113" totallines="119" coveredbranches="0" totalbranches="0" />
+    <class name="Profile" coveredlines="8" coverablelines="17" totallines="24" coveredbranches="0" totalbranches="0" />
+    <class name="ProfileManager" coveredlines="26" coverablelines="91" totallines="103" coveredbranches="0" totalbranches="0" />
+    <class name="Receiver" coveredlines="91" coverablelines="475" totallines="359" coveredbranches="0" totalbranches="0" />
+    <class name="ResetButton" coveredlines="7" coverablelines="32" totallines="34" coveredbranches="0" totalbranches="0" />
+    <class name="SceneManagerScript" coveredlines="2" coverablelines="12" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="TitleManager" coveredlines="0" coverablelines="22" totallines="25" coveredbranches="0" totalbranches="0" />
+    <class name="UIManager" coveredlines="16" coverablelines="62" totallines="69" coveredbranches="0" totalbranches="0" />
+    <class name="UnityMainThreadDispatcher" coveredlines="9" coverablelines="59" totallines="54" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

@@ -55,6 +55,4 @@ public class LevelSelectionPlayModeTests
             Assert.That(songName, Is.EqualTo("stageSelection"));
             yield return new WaitForSeconds(2f);
         }
-
-    
 }

@@ -7719,7 +7719,6 @@ GameObject:
   - component: {fileID: 1803197299}
   - component: {fileID: 1803197300}
   - component: {fileID: 1803197301}
-  - component: {fileID: 1803197302}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7838,7 +7837,8 @@ MonoBehaviour:
   floor_text: {fileID: 0}
   stage_text: {fileID: 0}
   UsernameError: {fileID: 0}
-  UsernameSuccess: {fileID: 0}
+  ProfileSuccess: {fileID: 0}
+  InvalidCredentials: {fileID: 0}
 --- !u!4 &1850999379
 Transform:
   m_ObjectHideFlags: 0
