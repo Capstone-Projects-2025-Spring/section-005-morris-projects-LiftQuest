@@ -78,6 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_SortingOrder: 10
+
   m_SortingLayerID: 30427401
   m_SortingLayer: 1
   m_SortingOrder: 10
@@ -146,7 +148,7 @@ MonoBehaviour:
   scaleSpeed: 0
   attackThreshold: 2
   damage: 1
-  attackCooldown: 7
+  attackCooldown: 6
   countdownText: {fileID: 1242217277453972271}
   countdownCanvas: {fileID: 6442462965401918134}
   player: {fileID: 0}
@@ -156,6 +158,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: 9db94b2edefd7b2448b97e062849680a, type: 3}
   damageSound: {fileID: 8300000, guid: f1ecedf745de76a46bf3feba35cc0392, type: 3}
   deathSound: {fileID: 8300000, guid: ea92746c2b609de4db2e1bb8051fb21b, type: 3}
+  enemyAnim: slimeAttacking
 --- !u!95 &4647959108520914669
 Animator:
   serializedVersion: 7
