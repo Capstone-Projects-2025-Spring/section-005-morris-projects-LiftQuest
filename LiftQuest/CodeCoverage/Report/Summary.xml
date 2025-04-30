@@ -1,83 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>4/29/2025 - 2:41:25 PM</Generatedon>
+    <Generatedon>4/30/2025 - 6:25:52 PM</Generatedon>
     <Parser>MultiReportParser (6x OpenCoverParser)</Parser>
     <Assemblies>7</Assemblies>
-    <Classes>47</Classes>
-    <Files>45</Files>
-    <Coveredlines>612</Coveredlines>
-    <Uncoveredlines>1288</Uncoveredlines>
-    <Coverablelines>1900</Coverablelines>
-    <Totallines>4153</Totallines>
-    <Linecoverage>32.2</Linecoverage>
+    <Classes>49</Classes>
+    <Files>92</Files>
+    <Coveredlines>485</Coveredlines>
+    <Uncoveredlines>3360</Uncoveredlines>
+    <Coverablelines>3845</Coverablelines>
+    <Totallines>4283</Totallines>
+    <Linecoverage>12.6</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
-    <Coveredmethods>144</Coveredmethods>
-    <Totalmethods>369</Totalmethods>
-    <Methodcoverage>39</Methodcoverage>
+    <Coveredmethods>94</Coveredmethods>
+    <Totalmethods>590</Totalmethods>
+    <Methodcoverage>15.9</Methodcoverage>
   </Summary>
   <Coverage>
-    <Assembly name="Assembly-CSharp" classes="3" coverage="25.9" coveredlines="7" coverablelines="27" totallines="80" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="10" methodcoverage="30">
-      <Class name="ButtonHoverSwap" coverage="100" coveredlines="7" coverablelines="7" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="3" methodcoverage="100" />
-      <Class name="CurlTracker" coverage="0" coveredlines="0" coverablelines="8" totallines="21" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
-      <Class name="SettingsMenu" coverage="0" coveredlines="0" coverablelines="12" totallines="32" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+    <Assembly name="Assembly-CSharp" classes="3" coverage="8.2" coveredlines="7" coverablelines="85" totallines="107" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="23" methodcoverage="13">
+      <Class name="ButtonHoverSwap" coverage="41.1" coveredlines="7" coverablelines="17" totallines="27" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="6" methodcoverage="50" />
+      <Class name="CurlTracker" coverage="0" coveredlines="0" coverablelines="23" totallines="21" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="SettingsMenu" coverage="0" coveredlines="0" coverablelines="45" totallines="59" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="14" methodcoverage="0" />
     </Assembly>
-    <Assembly name="Assembly-CSharp-Editor" classes="1" coverage="2" coveredlines="2" coverablelines="97" totallines="242" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="14" methodcoverage="7.1">
-      <Class name="ReadmeEditor" coverage="2" coveredlines="2" coverablelines="97" totallines="242" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="14" methodcoverage="7.1" />
+    <Assembly name="Assembly-CSharp-Editor" classes="1" coverage="0.8" coveredlines="2" coverablelines="237" totallines="242" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="28" methodcoverage="3.5">
+      <Class name="ReadmeEditor" coverage="0.8" coveredlines="2" coverablelines="237" totallines="242" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="28" methodcoverage="3.5" />
     </Assembly>
-    <Assembly name="Danqzq.LeaderboardCreator" classes="13" coverage="6.4" coveredlines="25" coverablelines="389" totallines="1010" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="11" totalmethods="117" methodcoverage="9.4">
-      <Class name="Dan.ConstantVariables" coverage="0" coveredlines="0" coverablelines="1" totallines="22" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
-      <Class name="Dan.Demo.EntryDisplay" coverage="0" coveredlines="0" coverablelines="8" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
-      <Class name="Dan.Demo.LeaderboardShowcase" coverage="0" coveredlines="0" coverablelines="110" totallines="176" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="37" methodcoverage="0" />
-      <Class name="Dan.ExtensionMethods" coverage="0" coveredlines="0" coverablelines="1" totallines="10" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
-      <Class name="Dan.LeaderboardCreatorConfig" coverage="100" coveredlines="2" coverablelines="2" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
-      <Class name="Dan.Main.LeaderboardCreator" coverage="15.6" coveredlines="16" coverablelines="102" totallines="323" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="7" totalmethods="22" methodcoverage="31.8" />
-      <Class name="Dan.Main.LeaderboardCreatorBehaviour" coverage="5.9" coveredlines="7" coverablelines="118" totallines="229" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="14" methodcoverage="21.4" />
-      <Class name="Dan.Main.LeaderboardReference" coverage="0" coveredlines="0" coverablelines="12" totallines="41" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="12" methodcoverage="0" />
-      <Class name="Dan.Main.Leaderboards" coverage="0" coveredlines="0" coverablelines="1" totallines="7" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
-      <Class name="Dan.Models.Entry" coverage="0" coveredlines="0" coverablelines="7" totallines="39" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
-      <Class name="Dan.Models.LeaderboardSearchQuery" coverage="0" coveredlines="0" coverablelines="15" totallines="52" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="19" methodcoverage="0" />
-      <Class name="Dan.Requests" coverage="0" coveredlines="0" coverablelines="2" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
-      <Class name="LeaderboardCreatorDemo.LeaderboardManager" coverage="0" coveredlines="0" coverablelines="10" totallines="40" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+    <Assembly name="Danqzq.LeaderboardCreator" classes="13" coverage="3.1" coveredlines="25" coverablelines="803" totallines="1020" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="11" totalmethods="197" methodcoverage="5.5">
+      <Class name="Dan.ConstantVariables" coverage="0" coveredlines="0" coverablelines="4" totallines="22" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="Dan.Demo.EntryDisplay" coverage="0" coveredlines="0" coverablelines="17" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="Dan.Demo.LeaderboardShowcase" coverage="0" coveredlines="0" coverablelines="177" totallines="186" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="37" methodcoverage="0" />
+      <Class name="Dan.ExtensionMethods" coverage="0" coveredlines="0" coverablelines="2" totallines="10" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="Dan.LeaderboardCreatorConfig" coverage="40" coveredlines="2" coverablelines="5" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="2" methodcoverage="50" />
+      <Class name="Dan.Main.LeaderboardCreator" coverage="6.8" coveredlines="16" coverablelines="235" totallines="323" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="7" totalmethods="44" methodcoverage="15.9" />
+      <Class name="Dan.Main.LeaderboardCreatorBehaviour" coverage="2.6" coveredlines="7" coverablelines="264" totallines="229" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="28" methodcoverage="10.7" />
+      <Class name="Dan.Main.LeaderboardReference" coverage="0" coveredlines="0" coverablelines="24" totallines="41" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="24" methodcoverage="0" />
+      <Class name="Dan.Main.Leaderboards" coverage="0" coveredlines="0" coverablelines="2" totallines="7" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="Dan.Models.Entry" coverage="0" coveredlines="0" coverablelines="16" totallines="39" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="8" methodcoverage="0" />
+      <Class name="Dan.Models.LeaderboardSearchQuery" coverage="0" coveredlines="0" coverablelines="30" totallines="52" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="38" methodcoverage="0" />
+      <Class name="Dan.Requests" coverage="0" coveredlines="0" coverablelines="4" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="LeaderboardCreatorDemo.LeaderboardManager" coverage="0" coveredlines="0" coverablelines="23" totallines="40" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
     </Assembly>
-    <Assembly name="EditMode" classes="3" coverage="98.2" coveredlines="57" coverablelines="58" totallines="337" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="13" totalmethods="13" methodcoverage="100">
-      <Class name="DatabaseManagerEditModeTests" coverage="97.2" coveredlines="35" coverablelines="36" totallines="141" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="8" totalmethods="8" methodcoverage="100" />
-      <Class name="LevelSelectionEditModeTests" coverage="100" coveredlines="15" coverablelines="15" totallines="55" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
-      <Class name="ProfileValidator" coverage="100" coveredlines="7" coverablelines="7" totallines="141" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+    <Assembly name="EditMode" classes="4" coverage="3.9" coveredlines="5" coverablelines="126" totallines="357" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="25" methodcoverage="4">
+      <Class name="DatabaseManagerEditModeTests" coverage="0" coveredlines="0" coverablelines="71" totallines="141" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="14" methodcoverage="0" />
+      <Class name="LevelSelectionEditModeTests" coverage="0" coveredlines="0" coverablelines="34" totallines="55" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="8" methodcoverage="0" />
+      <Class name="PlayerEditModeTests" coverage="100" coveredlines="5" coverablelines="5" totallines="20" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="ProfileValidator" coverage="0" coveredlines="0" coverablelines="16" totallines="141" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
     </Assembly>
-    <Assembly name="LeaderboardCreatorEditor" classes="1" coverage="0" coveredlines="0" coverablelines="166" totallines="332" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="17" methodcoverage="0">
-      <Class name="LeaderboardCreatorEditor.LeaderboardCreatorWindow" coverage="0" coveredlines="0" coverablelines="166" totallines="332" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="17" methodcoverage="0" />
+    <Assembly name="LeaderboardCreatorEditor" classes="1" coverage="0" coveredlines="0" coverablelines="365" totallines="332" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="34" methodcoverage="0">
+      <Class name="LeaderboardCreatorEditor.LeaderboardCreatorWindow" coverage="0" coveredlines="0" coverablelines="365" totallines="332" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="34" methodcoverage="0" />
     </Assembly>
-    <Assembly name="PlayMode" classes="2" coverage="73" coveredlines="46" coverablelines="63" totallines="155" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="7" totalmethods="8" methodcoverage="87.5">
-      <Class name="DatabaseManagerPlayModeTests" coverage="100" coveredlines="36" coverablelines="36" totallines="95" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="6" methodcoverage="100" />
-      <Class name="LevelSelectionPlayModeTests" coverage="37" coveredlines="10" coverablelines="27" totallines="60" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="2" methodcoverage="50" />
+    <Assembly name="PlayMode" classes="3" coverage="3.7" coveredlines="6" coverablelines="158" totallines="211" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="19" methodcoverage="10.5">
+      <Class name="DatabaseManagerPlayModeTests" coverage="0" coveredlines="0" coverablelines="79" totallines="95" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="12" methodcoverage="0" />
+      <Class name="LevelSelectionPlayModeTests" coverage="9.6" coveredlines="6" coverablelines="62" totallines="72" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="6" methodcoverage="33.3" />
+      <Class name="OptionsPlayModeTests" coverage="0" coveredlines="0" coverablelines="17" totallines="44" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
     </Assembly>
-    <Assembly name="Scripts" classes="24" coverage="43.1" coveredlines="475" coverablelines="1100" totallines="2241" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="109" totalmethods="190" methodcoverage="57.3">
-      <Class name="AudioManager" coverage="53.3" coveredlines="24" coverablelines="45" totallines="121" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="5" methodcoverage="60" />
-      <Class name="BicepCurlDetector" coverage="42.8" coveredlines="9" coverablelines="21" totallines="61" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="4" methodcoverage="75" />
-      <Class name="ButtonPress" coverage="100" coveredlines="4" coverablelines="4" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
-      <Class name="ButtonSound" coverage="0" coveredlines="0" coverablelines="2" totallines="16" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
-      <Class name="CalibrationData" coverage="100" coveredlines="5" coverablelines="5" totallines="103" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
-      <Class name="ChangeScene" coverage="0" coveredlines="0" coverablelines="6" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
-      <Class name="DatabaseManager" coverage="20.1" coveredlines="70" coverablelines="348" totallines="555" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="13" totalmethods="51" methodcoverage="25.4" />
-      <Class name="ESPHomeAPI" coverage="0" coveredlines="0" coverablelines="33" totallines="85" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
-      <Class name="GameManager" coverage="53" coveredlines="60" coverablelines="113" totallines="183" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="21" totalmethods="29" methodcoverage="72.4" />
-      <Class name="LevelButton" coverage="25" coveredlines="3" coverablelines="12" totallines="45" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
-      <Class name="LevelSelectionMenu" coverage="71.4" coveredlines="10" coverablelines="14" totallines="50" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="4" methodcoverage="50" />
-      <Class name="MainMenu" coverage="0" coveredlines="0" coverablelines="5" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
-      <Class name="Monster" coverage="68.5" coveredlines="61" coverablelines="89" totallines="141" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="16" totalmethods="18" methodcoverage="88.8" />
-      <Class name="MoveToNextLevel" coverage="0" coveredlines="0" coverablelines="5" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
-      <Class name="ParallaxBackground" coverage="100" coveredlines="2" coverablelines="2" totallines="15" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
-      <Class name="Player" coverage="87.8" coveredlines="36" coverablelines="41" totallines="98" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="7" totalmethods="8" methodcoverage="87.5" />
-      <Class name="Profile" coverage="100" coveredlines="8" coverablelines="8" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
-      <Class name="ProfileManager" coverage="70.2" coveredlines="26" coverablelines="37" totallines="103" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="7" methodcoverage="85.7" />
-      <Class name="Receiver" coverage="50.2" coveredlines="121" coverablelines="241" totallines="359" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="23" totalmethods="27" methodcoverage="85.1" />
-      <Class name="ResetButton" coverage="58.3" coveredlines="7" coverablelines="12" totallines="34" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
-      <Class name="SceneManagerScript" coverage="40" coveredlines="2" coverablelines="5" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="2" methodcoverage="50" />
-      <Class name="TitleManager" coverage="0" coveredlines="0" coverablelines="9" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
-      <Class name="UIManager" coverage="76.1" coveredlines="16" coverablelines="21" totallines="69" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
-      <Class name="UnityMainThreadDispatcher" coverage="50" coveredlines="11" coverablelines="22" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="5" methodcoverage="80" />
+    <Assembly name="Scripts" classes="24" coverage="21.2" coveredlines="440" coverablelines="2071" totallines="2258" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="76" totalmethods="264" methodcoverage="28.7">
+      <Class name="AudioManager" coverage="24.2" coveredlines="24" coverablelines="99" totallines="121" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="10" methodcoverage="30" />
+      <Class name="BicepCurlDetector" coverage="16" coveredlines="9" coverablelines="56" totallines="61" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="8" methodcoverage="37.5" />
+      <Class name="ButtonPress" coverage="40" coveredlines="4" coverablelines="10" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="4" methodcoverage="50" />
+      <Class name="ButtonSound" coverage="0" coveredlines="0" coverablelines="6" totallines="16" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="CalibrationData" coverage="45.4" coveredlines="5" coverablelines="11" totallines="103" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="2" methodcoverage="50" />
+      <Class name="ChangeScene" coverage="0" coveredlines="0" coverablelines="15" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="6" methodcoverage="0" />
+      <Class name="DatabaseManager" coverage="10.1" coveredlines="55" coverablelines="542" totallines="538" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="52" methodcoverage="11.5" />
+      <Class name="ESPHomeAPI" coverage="0" coveredlines="0" coverablelines="84" totallines="85" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="10" methodcoverage="0" />
+      <Class name="GameManager" coverage="30.5" coveredlines="58" coverablelines="190" totallines="185" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="11" totalmethods="30" methodcoverage="36.6" />
+      <Class name="LevelButton" coverage="9.3" coveredlines="3" coverablelines="32" totallines="45" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="7" methodcoverage="14.2" />
+      <Class name="LevelSelectionMenu" coverage="25.6" coveredlines="10" coverablelines="39" totallines="53" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="8" methodcoverage="25" />
+      <Class name="MainMenu" coverage="0" coveredlines="0" coverablelines="12" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Monster" coverage="36.8" coveredlines="56" coverablelines="152" totallines="149" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="10" totalmethods="20" methodcoverage="50" />
+      <Class name="MoveToNextLevel" coverage="0" coveredlines="0" coverablelines="12" totallines="23" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="ParallaxBackground" coverage="40" coveredlines="2" coverablelines="5" totallines="15" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="2" methodcoverage="50" />
+      <Class name="Player" coverage="48.6" coveredlines="55" coverablelines="113" totallines="119" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="11" totalmethods="19" methodcoverage="57.8" />
+      <Class name="Profile" coverage="47" coveredlines="8" coverablelines="17" totallines="24" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="2" methodcoverage="50" />
+      <Class name="ProfileManager" coverage="28.5" coveredlines="26" coverablelines="91" totallines="103" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="14" methodcoverage="42.8" />
+      <Class name="Receiver" coverage="22.8" coveredlines="91" coverablelines="398" totallines="359" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="10" totalmethods="28" methodcoverage="35.7" />
+      <Class name="ResetButton" coverage="21.8" coveredlines="7" coverablelines="32" totallines="34" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="4" methodcoverage="50" />
+      <Class name="SceneManagerScript" coverage="16.6" coveredlines="2" coverablelines="12" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="4" methodcoverage="25" />
+      <Class name="TitleManager" coverage="0" coveredlines="0" coverablelines="22" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="8" methodcoverage="0" />
+      <Class name="UIManager" coverage="25.8" coveredlines="16" coverablelines="62" totallines="69" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="4" methodcoverage="50" />
+      <Class name="UnityMainThreadDispatcher" coverage="15.2" coveredlines="9" coverablelines="59" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="10" methodcoverage="30" />
     </Assembly>
   </Coverage>
 </CoverageReport>
