@@ -139,8 +139,10 @@ public class GameManager : MonoBehaviour
     }
 
     public void Win(){
-        scoreText.text = "Score: " + score;
+        
         winScreen.SetActive(true);
+        scoreText.text = "Score: " + score.ToString("D3");
+        PlayerPrefs.SetInt("Score", score);
     }
 
     public void Lose(){

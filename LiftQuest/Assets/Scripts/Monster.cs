@@ -71,6 +71,7 @@ public class Monster : MonoBehaviour
         {
             Debug.Log("Boss attacked! Game over.");
             spawner.Win();
+            Destroy(gameObject);
         }
         else
         {
