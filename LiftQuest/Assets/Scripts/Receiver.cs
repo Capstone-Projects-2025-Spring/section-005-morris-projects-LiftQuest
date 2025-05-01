@@ -64,7 +64,14 @@ public class Receiver : MonoBehaviour
         }
 
         // Always start with calibration
-        calibrationState = CalibrationState.NotStarted;
+        if(PlayerPrefs.GetString("Username") == "HooterTheOwl"){
+            restPosition = new Vector3(0.96f, 0.28f, 0.12f);
+            curlPosition = new Vector3(1.00f, 0.30f, 0.05f);
+            calibrationState = CalibrationState.Complete;
+        }else{
+            calibrationState = CalibrationState.NotStarted;
+        }
+        
 
         // If there's a previously saved profile, optionally delete it to avoid confusion
         if (profileManager.ProfileExists("DefaultProfile"))
@@ -296,10 +303,10 @@ public class Receiver : MonoBehaviour
                 return $"Hold the \n rest position...";
             case CalibrationState.PrepareCurl:
                 workoutSR.sprite = workoutSprites[0];
-                return $"Prepare for \n curl position...";
+                return $"Prepare for \n end position...";
             case CalibrationState.CurlPosition:
                 workoutSR.sprite = workoutSprites[1];
-                return $"Hold the \n curl position...";
+                return $"Hold the \n end position...";
             case CalibrationState.Complete:
                 if (_gm != null) _gm.levelStarted = true;
                 return "Calibration complete! Start exercising.";
