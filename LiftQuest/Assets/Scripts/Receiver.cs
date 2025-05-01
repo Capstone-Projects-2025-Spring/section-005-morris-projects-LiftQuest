@@ -3,6 +3,7 @@ using System;
 using System.Net.Sockets;
 using System.Threading;
 using System.Collections;
+using System.IO;
 
 public class Receiver : MonoBehaviour
 {
@@ -48,6 +49,11 @@ public class Receiver : MonoBehaviour
 
     void Start()
     {
+        Secrets secrets = Secrets.Load();
+
+        serverIP = secrets.serverIP;
+        serverPort = secrets.serverPort;
+        
         profileManager = FindObjectOfType<ProfileManager>();
         bicepCurlDetector = FindObjectOfType<BicepCurlDetector>();
 
@@ -78,6 +84,7 @@ public class Receiver : MonoBehaviour
 
         ConnectToServer();
     }
+
 
     void ConnectToServer()
     {
