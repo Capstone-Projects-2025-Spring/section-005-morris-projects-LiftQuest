@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject upNextPanel;
     private int i = 0;
     public DatabaseManager dbManager;
+
+    public GameObject gameStuff;
     private void Start()
     {
         upNextIcon.GetComponent<SpriteRenderer>().sprite = upNextIcons[i];
@@ -41,13 +43,16 @@ public class GameManager : MonoBehaviour
 
     public void Pause(){
         pauseScreen.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void PauseBack(){
+        Time.timeScale = 1f;
         pauseScreen.SetActive(false);
     }
 
     public void LogOut(){
+        Time.timeScale = 1f;
         if (dbManager != null)
         {
             dbManager.Logout();
@@ -60,6 +65,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void MainMenu(){
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -69,6 +75,8 @@ public class GameManager : MonoBehaviour
     {
         calibrationScreen.SetActive(false);
         levelStarted = false;
+        gameStuff.SetActive(true);
+         upNextIcon.SetActive(true);
         StartCoroutine(StartNextRound());
     }
 }
@@ -141,6 +149,8 @@ public class GameManager : MonoBehaviour
     public void Win(){
         
         winScreen.SetActive(true);
+        gameStuff.SetActive(false);
+        upNextIcon.SetActive(false);
         scoreText.text = "Score: " + score.ToString("D3");
         PlayerPrefs.SetInt("Score", score);
     }
