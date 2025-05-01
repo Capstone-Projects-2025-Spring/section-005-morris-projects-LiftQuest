@@ -1,28 +1,29 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 4/30/2025 - 6:25:52 PM |
+| Generated on: | 5/1/2025 - 10:28:11 AM |
 | Parser: | MultiReportParser (6x OpenCoverParser) |
 | Assemblies: | 7 |
-| Classes: | 49 |
-| Files: | 92 |
-| Covered lines: | 485 |
-| Uncovered lines: | 3360 |
-| Coverable lines: | 3845 |
-| Total lines: | 4283 |
-| Line coverage: | 12.6% (485 of 3845) |
+| Classes: | 50 |
+| Files: | 93 |
+| Covered lines: | 1028 |
+| Uncovered lines: | 2843 |
+| Coverable lines: | 3871 |
+| Total lines: | 4324 |
+| Line coverage: | 26.5% (1028 of 3871) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
-| Covered methods: | 94 |
-| Total methods: | 590 |
-| Method coverage: | 15.9% (94 of 590) |
+| Covered methods: | 169 |
+| Total methods: | 591 |
+| Method coverage: | 28.5% (169 of 591) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**Assembly-CSharp**|**7**|**78**|**85**|**107**|**8.2%**|**0**|**0**|****|**3**|**23**|**13%**|
-|ButtonHoverSwap|7|10|17|27|41.1%|0|0||3|6|50%|
+|**Assembly-CSharp**|**42**|**61**|**103**|**145**|**40.7%**|**0**|**0**|****|**11**|**26**|**42.3%**|
+|AspectRatioEnforcer|13|5|18|38|72.2%|0|0||3|3|100%|
+|ButtonHoverSwap|11|6|17|27|64.7%|0|0||4|6|66.6%|
 |CurlTracker|0|23|23|21|0%|0|0||0|3|0%|
-|SettingsMenu|0|45|45|59|0%|0|0||0|14|0%|
+|SettingsMenu|18|27|45|59|40%|0|0||4|14|28.5%|
 |**Assembly-CSharp-Editor**|**2**|**235**|**237**|**242**|**0.8%**|**0**|**0**|****|**1**|**28**|**3.5%**|
 |ReadmeEditor|2|235|237|242|0.8%|0|0||1|28|3.5%|
 |**Danqzq.LeaderboardCreator**|**25**|**778**|**803**|**1020**|**3.1%**|**0**|**0**|****|**11**|**197**|**5.5%**|
@@ -39,39 +40,39 @@
 |Dan.Models.LeaderboardSearchQuery|0|30|30|52|0%|0|0||0|38|0%|
 |Dan.Requests|0|4|4|23|0%|0|0||0|4|0%|
 |LeaderboardCreatorDemo.LeaderboardManager|0|23|23|40|0%|0|0||0|4|0%|
-|**EditMode**|**5**|**121**|**126**|**357**|**3.9%**|**0**|**0**|****|**1**|**25**|**4%**|
-|DatabaseManagerEditModeTests|0|71|71|141|0%|0|0||0|14|0%|
-|LevelSelectionEditModeTests|0|34|34|55|0%|0|0||0|8|0%|
+|**EditMode**|**72**|**54**|**126**|**357**|**57.1%**|**0**|**0**|****|**13**|**25**|**52%**|
+|DatabaseManagerEditModeTests|39|32|71|141|54.9%|0|0||7|14|50%|
+|LevelSelectionEditModeTests|19|15|34|55|55.8%|0|0||4|8|50%|
 |PlayerEditModeTests|5|0|5|20|100%|0|0||1|1|100%|
-|ProfileValidator|0|16|16|141|0%|0|0||0|2|0%|
+|ProfileValidator|9|7|16|141|56.2%|0|0||1|2|50%|
 |**LeaderboardCreatorEditor**|**0**|**365**|**365**|**332**|**0%**|**0**|**0**|****|**0**|**34**|**0%**|
 |LeaderboardCreatorEditor.LeaderboardCreatorWindow|0|365|365|332|0%|0|0||0|34|0%|
-|**PlayMode**|**6**|**152**|**158**|**211**|**3.7%**|**0**|**0**|****|**2**|**19**|**10.5%**|
-|DatabaseManagerPlayModeTests|0|79|79|95|0%|0|0||0|12|0%|
-|LevelSelectionPlayModeTests|6|56|62|72|9.6%|0|0||2|6|33.3%|
-|OptionsPlayModeTests|0|17|17|44|0%|0|0||0|1|0%|
-|**Scripts**|**440**|**1631**|**2071**|**2258**|**21.2%**|**0**|**0**|****|**76**|**264**|**28.7%**|
-|AudioManager|24|75|99|121|24.2%|0|0||3|10|30%|
-|BicepCurlDetector|9|47|56|61|16%|0|0||3|8|37.5%|
-|ButtonPress|4|6|10|17|40%|0|0||2|4|50%|
+|**PlayMode**|**77**|**75**|**152**|**197**|**50.6%**|**0**|**0**|****|**9**|**17**|**52.9%**|
+|DatabaseManagerPlayModeTests|43|36|79|95|54.4%|0|0||6|12|50%|
+|LevelSelectionPlayModeTests|17|39|56|58|30.3%|0|0||2|4|50%|
+|OptionsPlayModeTests|17|0|17|44|100%|0|0||1|1|100%|
+|**Scripts**|**810**|**1275**|**2085**|**2275**|**38.8%**|**0**|**0**|****|**124**|**264**|**46.9%**|
+|AudioManager|53|46|99|121|53.5%|0|0||6|10|60%|
+|BicepCurlDetector|21|35|56|61|37.5%|0|0||5|8|62.5%|
+|ButtonPress|10|0|10|17|100%|0|0||4|4|100%|
 |ButtonSound|0|6|6|16|0%|0|0||0|4|0%|
-|CalibrationData|5|6|11|103|45.4%|0|0||1|2|50%|
+|CalibrationData|11|0|11|103|100%|0|0||2|2|100%|
 |ChangeScene|0|15|15|24|0%|0|0||0|6|0%|
-|DatabaseManager|55|487|542|538|10.1%|0|0||6|52|11.5%|
+|DatabaseManager|86|456|542|538|15.8%|0|0||10|52|19.2%|
 |ESPHomeAPI|0|84|84|85|0%|0|0||0|10|0%|
-|GameManager|58|132|190|185|30.5%|0|0||11|30|36.6%|
-|LevelButton|3|29|32|45|9.3%|0|0||1|7|14.2%|
-|LevelSelectionMenu|10|29|39|53|25.6%|0|0||2|8|25%|
+|GameManager|100|98|198|195|50.5%|0|0||17|30|56.6%|
+|LevelButton|8|24|32|45|25%|0|0||3|7|42.8%|
+|LevelSelectionMenu|29|10|39|53|74.3%|0|0||4|8|50%|
 |MainMenu|0|12|12|19|0%|0|0||0|4|0%|
-|Monster|56|96|152|149|36.8%|0|0||10|20|50%|
+|Monster|63|89|152|149|41.4%|0|0||11|20|55%|
 |MoveToNextLevel|0|12|12|23|0%|0|0||0|4|0%|
-|ParallaxBackground|2|3|5|15|40%|0|0||1|2|50%|
+|ParallaxBackground|5|0|5|15|100%|0|0||2|2|100%|
 |Player|55|58|113|119|48.6%|0|0||11|19|57.8%|
 |Profile|8|9|17|24|47%|0|0||1|2|50%|
-|ProfileManager|26|65|91|103|28.5%|0|0||6|14|42.8%|
-|Receiver|91|307|398|359|22.8%|0|0||10|28|35.7%|
-|ResetButton|7|25|32|34|21.8%|0|0||2|4|50%|
+|ProfileManager|54|37|91|103|59.3%|0|0||11|14|78.5%|
+|Receiver|209|195|404|366|51.7%|0|0||21|28|75%|
+|ResetButton|15|17|32|34|46.8%|0|0||3|4|75%|
 |SceneManagerScript|2|10|12|17|16.6%|0|0||1|4|25%|
 |TitleManager|0|22|22|25|0%|0|0||0|8|0%|
-|UIManager|16|46|62|69|25.8%|0|0||2|4|50%|
-|UnityMainThreadDispatcher|9|50|59|54|15.2%|0|0||3|10|30%|
+|UIManager|42|20|62|69|67.7%|0|0||4|4|100%|
+|UnityMainThreadDispatcher|39|20|59|54|66.1%|0|0||8|10|80%|

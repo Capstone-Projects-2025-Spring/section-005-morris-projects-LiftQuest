@@ -75,3 +75,6 @@ crashlytics-build.properties
 # Secrets
 secrets.py
 secrets.py.meta
+
+/Assets/Scripts/secrets.json
+/Assets/Scripts/secrets.json.meta
