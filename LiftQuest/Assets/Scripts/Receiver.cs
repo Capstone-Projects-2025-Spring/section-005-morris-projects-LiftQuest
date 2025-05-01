@@ -64,13 +64,8 @@ public class Receiver : MonoBehaviour
         }
 
         // Always start with calibration
-        if(PlayerPrefs.GetString("Username") == "HooterTheOwl"){
-            restPosition = new Vector3(0.96f, 0.28f, 0.12f);
-            curlPosition = new Vector3(1.00f, 0.30f, 0.05f);
-            calibrationState = CalibrationState.Complete;
-        }else{
-            calibrationState = CalibrationState.NotStarted;
-        }
+        calibrationState = CalibrationState.NotStarted;
+        
         
 
         // If there's a previously saved profile, optionally delete it to avoid confusion
